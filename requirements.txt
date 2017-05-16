@@ -1,0 +1,4 @@
+unicorn>=1.0.0
+capstone>=3.0.0
+colorama>=0.3.7
+pycparser>=2.17
