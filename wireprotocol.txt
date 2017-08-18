@@ -1,0 +1,63 @@
+Open session
+    - cmd: 0
+    - name: data
+Response:
+    - handle: int
+
+Close handle
+    - cmd: 1
+    - handle: int
+Response:
+    none
+
+IPC message
+    - cmd: 2
+    - request_type: int
+    - data_count: int
+    - data: int[data_count]
+    - copy_count: int
+    - copied_handles: int[copy_count]
+    - move_count: int
+    - moved_handles: int[move_count]
+    - a_count: int
+    - a_buffers:
+        - blob: data
+        - perms: int
+    - b_count: int
+    - b_buffers:
+        - blob: data
+        - perms: int
+    - c_count: int
+    - c_buffers:
+        - blob: data
+    - x_count: int
+    - x_buffers:
+        - blob: data
+        - counter: int
+    - handle: int
+Response:
+    - error_code: int
+    - data_count: int
+    - data: int[data_count]
+    - copy_count: int
+    - copied_handles: int[copy_count]
+    - move_count: int
+    - moved_handles: int[move_count]
+    - a_count: int
+    - a_buffers:
+        - blob: data
+        - perms: int
+    - b_count: int
+    - b_buffers:
+        - blob: data
+        - perms: int
+    - c_count: int
+    - c_buffers:
+        - blob: data
+    - x_count: int
+    - x_buffers:
+        - blob: data
+        - counter: int
+    - response_type: int
+
+NOTE: If error_code is nonzero, no fields will follow!

@@ -1,0 +1,4 @@
+nso:
+  - main
+maps:
+  Main: [0x7100000000, "main.map"]
