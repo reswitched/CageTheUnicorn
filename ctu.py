@@ -396,7 +396,7 @@ class CTU(Cmd, object):
 
 		self.map(loadbase, len(full) + bsssize)
 		self.writemem(loadbase, full)
-		defineAddressClass(fn.rsplit('/', 1)[-1].title(), loadbase, len(full))
+		defineAddressClass(fn.rsplit('/', 1)[-1].split('.', 1)[0].title(), loadbase, len(full))
 
 		if relocate:
 			return relocation.relocate(self, loadbase)
